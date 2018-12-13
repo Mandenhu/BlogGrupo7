@@ -6,8 +6,6 @@ import PeopleListItem from './PeopleListItem'
 
 const PeopleList = props => {
     
-    // Recebe peoples por props
-    // Recebe SelecionarPeople por props 
     const {peoples, selecionarPeople} = props;
     
     return (

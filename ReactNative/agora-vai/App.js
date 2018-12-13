@@ -3,8 +3,6 @@ import {PeoplePage} from './src/pages';
 import {PeopleDetailPage} from './src/pages';
 import {FirstLetter} from './src/util'
 
-// createStackNavigator além de receber objetos literais, podem receber funções.
-// A ordem das screens importa, principalmente a primeira, que sera como uma "index"
 const AppNavigator = createStackNavigator({
     'Main': {
         screen: PeoplePage,
@@ -26,8 +24,7 @@ const AppNavigator = createStackNavigator({
 
     'PeopleDetailPage': {
         screen: PeopleDetailPage,
-        // utilizar o {navigation} permite passar propriedades entre as pages, permitindo buscaro nome clicado no maping feito pela PeopleList atraves
-        // da possagem de parametros entre as pages
+        // utilizar o {navigation} permite passar as propriedades entre as pages
         navigationOptions: ({navigation}) => { 
           const peopleName = FirstLetter(navigation.state.params.people.name.first) + ' ' +  FirstLetter(navigation.state.params.people.name.last);
           return({

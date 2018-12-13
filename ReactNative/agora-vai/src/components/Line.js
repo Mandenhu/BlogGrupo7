@@ -3,7 +3,7 @@ import {View, Text, StyleSheet} from 'react-native'
 import Estilo, {stylePeopleDetailPage} from './Estilo'
 
 // Definir os valores padrão de label e content como "" protege o codigo de um crash
-const Line = ({label = "", content = "-"}) => {
+const Line = ({label = " - ", content = " - "}) => {
     return (
         <View style ={stylePeopleDetailPage.line}>
             <Text style ={[

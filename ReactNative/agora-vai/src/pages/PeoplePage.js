@@ -20,7 +20,6 @@ export default class PeoplePage extends React.Component {
 
   componentDidMount(){
     this.setState({loading: true});
-   setTimeout(() => {
         axios
         .get('https://randomuser.me/api/?nat=br&results=15')
         .then(response => {
@@ -35,7 +34,6 @@ export default class PeoplePage extends React.Component {
               loading: false,
           })
         });
-    }, 3000)
   }
   
   render(){
@@ -49,8 +47,6 @@ export default class PeoplePage extends React.Component {
             ? <Text style={stylesPeoplePage.error}>Ops, deu merda :(</Text>
             : <PeopleList 
                   peoples = {this.state.peoples}
-                  // Passa SelecionarPeople por props para PeopleList
-                  // ParametroPegaNome serve para passar os dados do nome do usuario quando clicado
                   selecionarPeople = {(ParametroPegaNome) => {this.props.navigation.navigate('PeopleDetailPage', ParametroPegaNome)}}
               />
       }

@@ -1,6 +1,5 @@
 import {StyleSheet} from 'react-native';
 
-// StyleSheet ajuda nas mensagens de erro, e futuramente pode melhorar o desempenho
 export const styleHeader = StyleSheet.create({
     container: {
         marginTop: 25,
@@ -23,7 +22,6 @@ export const stylePeopleList = StyleSheet.create({
         borderTopWidth: 5,
         borderTopColor: '#fff',
         
-        // Alinhamento vertical usando alignItems + flexDirection
         alignItems: 'center',
         flexDirection: 'row'
     },
@@ -33,7 +31,6 @@ export const stylePeopleList = StyleSheet.create({
         flex: 7
     },
     avatar: {
-        // aspectRatio mantem as proporções da imagem
         aspectRatio: 1,
         flex:1,
         marginLeft: 10,
