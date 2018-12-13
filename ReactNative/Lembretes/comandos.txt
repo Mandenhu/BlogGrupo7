@@ -1,0 +1,11 @@
+
+## Comandos do emulador Android ou Mac
+emulator -list-avds
+
+emulator -avd XXXXXXXXXX
+
+## Sobe o React dentro do emulador
+react-native run-xxxxxx (android/ios) dentro da pasta
+
+# 
+yarn run android

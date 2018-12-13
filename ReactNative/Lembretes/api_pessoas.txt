@@ -1,0 +1,11 @@
+https://randomuser.me/api/?nat=br&results=5
+
+filtro 
+
+nat - nacionalidade BR
+results - numero de resultados requeridos
+
+
+$ yarn add axios
+
+para utilizar as APIs
