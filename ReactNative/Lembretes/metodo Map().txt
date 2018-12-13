@@ -1,7 +1,0 @@
-array.map(callbackfn[, thisArg])
-
-array -  Obrigatório.  Um objeto de matriz.  
-
-callbackfn - Obrigatório.  Uma função que aceita até três argumentos.  O método map chama a função callbackfn uma vez para cada elemento da matriz.  
-
-thisArg - Opcional.  Um objeto ao qual a palavra-chave this pode fazer referência na função callbackfn.  Se thisArg for omitido, undefined será usado como o valor de this.  
