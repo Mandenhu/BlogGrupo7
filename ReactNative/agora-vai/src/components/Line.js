@@ -2,8 +2,8 @@ import React from 'react'
 import {View, Text, StyleSheet} from 'react-native'
 import Estilo, {stylePeopleDetailPage} from './Estilo'
 
-// Definir os valores padrão de label e content como "" protege o codigo de um crash
-const Line = ({label = " - ", content = " - "}) => {
+// Definir os valores padrão de label e content com "".. protege o codigo de um crash
+const Line = ({label = " ", content = " - "}) => {
     return (
         <View style ={stylePeopleDetailPage.line}>
             <Text style ={[

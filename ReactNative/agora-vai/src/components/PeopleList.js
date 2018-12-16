@@ -12,11 +12,13 @@ const PeopleList = props => {
         <FlatList 
             style={stylePeopleList.container}
             data={peoples}
+
             renderItem={({item}) => (
                 <PeopleListItem 
                 people = {item}
                 selecionarPeople = {selecionarPeople} />
-            )}
+                )}
+
             keyExtractor={item => item.login.uuid}
         />
     ); 

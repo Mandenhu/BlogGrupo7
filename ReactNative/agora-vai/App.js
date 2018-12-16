@@ -23,15 +23,12 @@ const AppNavigator = createStackNavigator({
           }
         }
     },
-
     'PeopleDetailPage': {
         screen: PeopleDetailPage,
         // utilizar o {navigation} permite passar propriedades entre as pages, permitindo buscaro nome clicado no maping feito pela PeopleList atraves
         // da possagem de parametros entre as pages
         navigationOptions: ({navigation}) => { 
-          const {first} = navigation.state.params.people.name;
-          const {last} = navigation.state.params.people.name;
-          const peopleName = ` ${FirstLetter(first)} ${FirstLetter(last)}`;
+          const peopleName = FirstLetter(navigation.state.params.people.name.first) + ' ' +  FirstLetter(navigation.state.params.people.name.last);
           return({
             title: (peopleName),
             headerTintColor: '#fff',
