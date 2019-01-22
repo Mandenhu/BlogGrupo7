@@ -39,20 +39,18 @@ export default class LoginPage extends React.Component {
         })
     }
 
-    
-
     tryLogin(){
         const {email, password} = this.state;
         this.setState({isLoading: true , message: ''});
 
         const loginUserOK = user => {
-            this.setState({message: "Sucesso"})
+            this.setState({message: "Sucesso"});
         }
 
         const loginUserFalhou = error => {
             this.setState({
-                // message: error.code            
-                message: this.converteMessage(error)
+                //message: error.code            
+                message: this.converteMessage(error.code)
             })
         }
         
@@ -90,15 +88,18 @@ export default class LoginPage extends React.Component {
                 .then(() => this.setState({isLoading : false}))
     }
 
-    converteMessage(errorCode) {
-        switch(errorCode){
-            // https://firebase.google.com/docs/reference/js/
+    converteMessage(error) {
+        switch(error){
+            case 'auth/invalid-email':
+                return "Email não encontrado!";
             case 'auth/wrong-password':
                 return "Senha inválida!";
-            case 'auth/invalid-email':
-                return "Email não encontrado!"
+            case 'auth/weak-password':
+                return "Senha fraca, adicione mais caracteres!";
+            case 'auth/invalid-password':
+                return "O valor fornecido para password é inválido"
             case 'auth/user-not-found':
-                return "Usuário não encontrado!"
+                return "Usuário não encontrado!";
             default: 
                 return "Erro desconhecido"
         }
