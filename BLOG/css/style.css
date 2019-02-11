@@ -1,0 +1,28 @@
+header > img {
+	height: 200px;
+	width: 1500px;
+}
+
+.divCards{
+	display: flex;
+	justify-content: space-between;
+	width: auto;
+	margin: 50px;
+}
+
+.divCards > .card-header{
+	background-color: white;
+}
+
+footer{
+	background-color: rgb(148, 148, 148);
+	height: 150px;
+}
+
+footer .rodape{
+	display: flex;
+	justify-content: center;
+	padding: 50px;
+	align-self: center;
+	color: white;
+}
